@@ -31,8 +31,10 @@ class CarWash
   end
 
   def provide_year
-    age = 2016 - @opening_year
-    "I am #{age} years old"
+    t = Time.now
+    year = t.year
+    @age = year - @opening_year
+    return "I am #{@age} years old"
   end
 
 end
